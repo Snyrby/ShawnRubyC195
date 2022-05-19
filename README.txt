@@ -1,4 +1,4 @@
-Title: ShawnRubyC195
+# ShawnRubyC195
 Purpose: database program for appointments
 Author: Shawn Ruby
 Contact Info: Snyrby@gmail.com or sruby6@students.wgu.edu
