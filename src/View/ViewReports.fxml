@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="920.0" minHeight="-Infinity" minWidth="920.0" prefHeight="615.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ViewReportsController">
+   <children>
+      <VBox maxWidth="920.0" minWidth="920.0" prefHeight="400.0" prefWidth="920.0">
+         <children>
+            <HBox alignment="CENTER" maxWidth="920.0" minWidth="920.0" prefHeight="100.0" prefWidth="920.0">
+               <children>
+                  <Label text="Reports">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox maxHeight="250.0" maxWidth="920.0" minHeight="250.0" minWidth="920.0" prefHeight="250.0" prefWidth="920.0">
+               <children>
+                  <VBox maxWidth="450.0" minWidth="450.0" prefHeight="250.0" prefWidth="450.0" spacing="15.0">
+                     <children>
+                        <HBox prefHeight="37.0" prefWidth="357.0" spacing="5.0">
+                           <children>
+                              <ComboBox fx:id="monthComboBox" prefWidth="150.0" promptText="Select Month:" />
+                              <ComboBox fx:id="typeComboBox" prefWidth="150.0" promptText="Select Type:" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="reportLabel" text="Label" visible="false" />
+                     </children>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <Separator maxWidth="150.0" minWidth="150.0" prefWidth="150.0" visible="false" />
+                  <TableView fx:id="locationTableView" maxWidth="300.0" minWidth="300.0" prefHeight="200.0" prefWidth="300.0">
+                    <columns>
+                        <TableColumn fx:id="customerNameLocationColumn" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="Customer Name" />
+                      <TableColumn fx:id="locationColumn" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="Location" />
+                      <TableColumn fx:id="locationTotalColumn" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="Total" />
+                    </columns>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </TableView>
+               </children>
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" maxWidth="920.0" minHeight="250.0" minWidth="920.0" prefHeight="250.0" prefWidth="920.0">
+               <children>
+                  <TableView fx:id="contactTableView" maxWidth="910.0" minWidth="910.0" prefHeight="250.0" prefWidth="910.0">
+                    <columns>
+                        <TableColumn fx:id="contactNameColumn" maxWidth="113.75" minWidth="113.75" prefWidth="113.75" resizable="false" text="Contact Name" />
+                      <TableColumn fx:id="appointmentIDColumn" maxWidth="113.75" minWidth="113.75" prefWidth="113.75" resizable="false" text="Appointment ID" />
+                      <TableColumn fx:id="titleColumn" maxWidth="113.75" minWidth="113.75" prefWidth="113.75" resizable="false" text="Title" />
+                        <TableColumn fx:id="typeContactColumn" maxWidth="113.75" minWidth="113.75" prefWidth="113.75" resizable="false" text="Type" />
+                        <TableColumn fx:id="descriptionColumn" maxWidth="113.75" minWidth="113.75" prefWidth="113.75" resizable="false" text="Description" />
+                        <TableColumn fx:id="startColumn" maxWidth="113.75" minWidth="113.75" prefWidth="113.75" resizable="false" text="Start" />
+                        <TableColumn fx:id="endColumn" maxWidth="113.75" minWidth="113.75" prefWidth="113.75" resizable="false" text="End" />
+                        <TableColumn fx:id="customerIDColumn" maxWidth="113.75" minWidth="113.75" prefWidth="113.75" resizable="false" text="Customer ID" />
+                    </columns>
+                  </TableView>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" maxHeight="50.0" maxWidth="920.0" minHeight="50.0" minWidth="920.0" prefHeight="50.0" prefWidth="920.0">
+               <children>
+                  <ComboBox fx:id="contactComboBox" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets left="5.0" right="280.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Button mnemonicParsing="false" onAction="#returnButtonPushed" text="Go Back" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

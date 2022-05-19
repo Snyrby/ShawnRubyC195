@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="500.0" maxWidth="1350.0" minHeight="500.0" minWidth="1350.0" prefHeight="400.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ViewAppointmentsController">
+   <children>
+      <VBox alignment="TOP_CENTER" maxHeight="500.0" maxWidth="1350.0" minHeight="500.0" minWidth="1350.0" prefHeight="500.0" prefWidth="1350.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" maxWidth="1350.0" minWidth="1350.0" prefHeight="100.0" prefWidth="1350.0">
+               <children>
+                  <Label fx:id="startText" alignment="TOP_LEFT" text="Appointment Info">
+                     <font>
+                        <Font name="System Italic" size="36.0" />
+                     </font>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Separator halignment="RIGHT" prefHeight="55.0" prefWidth="86.0" visible="false" />
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="218.0">
+                     <children>
+                        <Label text="View Contact Appointments:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="contactComboBox" prefWidth="150.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Label text="Sort By:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="72.0" prefWidth="1050.0" spacing="10.0">
+               <children>
+                  <RadioButton fx:id="allRadioButton" mnemonicParsing="false" selected="true" text="All" />
+                  <RadioButton fx:id="weekRadioButton" mnemonicParsing="false" text="Week" />
+                  <RadioButton fx:id="monthRadioButton" mnemonicParsing="false" text="Month" />
+               </children>
+            </HBox>
+            <TableView fx:id="appointmentTableView" maxHeight="300.0" maxWidth="1330.0" minHeight="300.0" minWidth="1330.0" prefHeight="300.0" prefWidth="1330.0">
+              <columns>
+                  <TableColumn fx:id="appointmentIdColumn" maxWidth="133.0" minWidth="133.0" prefWidth="133.0" resizable="false" text="Appointment Id" />
+                <TableColumn fx:id="titleColumn" maxWidth="133.0" minWidth="133.0" prefWidth="133.0" resizable="false" text="Title" />
+                  <TableColumn fx:id="descriptionColumn" maxWidth="133.0" minWidth="133.0" prefWidth="133.0" resizable="false" text="Description" />
+                  <TableColumn fx:id="locationColumn" maxWidth="133.0" minWidth="133.0" prefWidth="133.0" resizable="false" text="Location" />
+                  <TableColumn fx:id="typeColumn" maxWidth="133.0" minWidth="133.0" prefWidth="133.0" resizable="false" text="Type" />
+                  <TableColumn fx:id="startColumn" maxWidth="133.0" minWidth="133.0" prefWidth="133.0" resizable="false" text="Start Time" />
+                  <TableColumn fx:id="endColumn" maxWidth="133.0" minWidth="133.0" prefWidth="133.0" resizable="false" text="End Time" />
+                  <TableColumn fx:id="contactColumn" maxWidth="133.0" minWidth="133.0" prefWidth="133.0" resizable="false" text="Contact Name" />
+                  <TableColumn fx:id="customerIdColumn" maxWidth="133.0" minWidth="133.0" prefWidth="133.0" resizable="false" text="Customer Id" />
+                  <TableColumn fx:id="contactIdColumn" maxWidth="133.0" minWidth="133.0" prefWidth="133.0" resizable="false" text="Contact Id" />
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addAppointmentButtonPushed" text="Add Appointment" />
+                  <Button mnemonicParsing="false" onAction="#modifyAppointmentButtonPushed" text="Modify Appointment" />
+                  <Button mnemonicParsing="false" onAction="#removeAppointmentButtonPushed" text="Remove Appointment" />
+                  <Button mnemonicParsing="false" onAction="#cancelButtonPushed" text="Cancel" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

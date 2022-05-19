@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="510.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddAppointmentsController">
+   <children>
+      <VBox alignment="CENTER_RIGHT" prefHeight="500.0" prefWidth="425.0">
+         <children>
+            <HBox alignment="BOTTOM_RIGHT" maxHeight="37.4" minHeight="37.4" prefHeight="42.4" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="Title:">
+                     <font>
+                        <Font name="System Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="titleTextField" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></HBox>
+            <Label fx:id="titleLabel" text="ENTER A VALID FIRST NAME" textFill="#ff2805" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <HBox alignment="BOTTOM_RIGHT" maxHeight="37.4" minHeight="37.4" prefHeight="90.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="Description:">
+                     <font>
+                        <Font name="System Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="descriptionTextField" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></HBox>
+            <Label fx:id="descriptionLabel" text="ENTER A VALID LAST NAME" textFill="#ff2805" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <HBox alignment="BOTTOM_RIGHT" maxHeight="37.4" minHeight="37.4" prefHeight="37.4" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="Location:">
+                     <font>
+                        <Font name="System Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="locationTextField" />
+               </children></HBox>
+            <Label fx:id="locationLabel" text="ENTER A VALID ADDRESS" textFill="#ff2805" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <HBox alignment="BOTTOM_RIGHT" maxHeight="37.4" minHeight="37.4" prefHeight="42.4" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="Type:">
+                     <font>
+                        <Font name="System Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="typeTextField" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></HBox>
+            <Label fx:id="typeLabel" text="ENTER A VALID PHONE NUMBER" textFill="#ff2805" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_RIGHT" maxHeight="37.4" minHeight="37.4" prefHeight="37.4" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="Start Time:">
+                     <font>
+                        <Font name="System Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="startDate" editable="false" maxWidth="149.6" minWidth="149.6" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></HBox>
+            <ComboBox fx:id="startHours" prefWidth="150.0" promptText="Time">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </ComboBox>
+            <Label fx:id="startTimeLabel" text="SELECT A START TIME" textFill="#ff2805" visible="false">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <HBox alignment="BOTTOM_RIGHT" maxHeight="37.4" minHeight="37.4" prefHeight="37.4" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="Appointment Length:">
+                     <font>
+                        <Font name="System Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="appointmentLength" prefWidth="150.0" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></HBox>
+            <Label fx:id="appointmentLengthLabel" text="SELECT AN APPOINTMENT LENGTH" textFill="#ff2805" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <HBox alignment="BOTTOM_RIGHT" maxHeight="42.4" minHeight="37.4" prefHeight="37.4" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="Contact Name:">
+                     <font>
+                        <Font name="System Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="contactName" prefWidth="150.0" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <Label fx:id="contactNameLabel" text="SELECT A CONTACT NAME" textFill="#ff2805" visible="false">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_RIGHT" maxHeight="37.4" minHeight="37.4" prefHeight="37.4" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addAppointmentButtonPushed" text="Add Appointment" />
+                  <Button cancelButton="true" mnemonicParsing="false" onAction="#cancelButtonPushed" text="Cancel" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
